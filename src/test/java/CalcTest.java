@@ -1,3 +1,4 @@
+
 import Calc.Calc;
 import Calc.CalcException;
 import org.junit.After;
@@ -9,8 +10,8 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by Админ on 14.11.2016.
  */
-@MyAnno(
-        priority = MyAnno.Priority.HIGH,
+@TestInfo(
+        priority = TestInfo.Priority.HIGH,
         createdBy = "Konstantin_Loginov",
         tags = {"task1","test" }
 )
@@ -32,6 +33,7 @@ public class CalcTest {
         assertEquals(15, calc.getSum(7,8));
     }
 
+    @UserStorie(userStory = "Деление одного числа на другое")
     @Test
     public void testGetDivide() throws Exception {
         try{
@@ -47,7 +49,7 @@ public class CalcTest {
         }
 
     }
-
+    @UserStorie(userStory = "Умножение одного числа на другое")
     @Test
     public void testGetMultiple() throws Exception {
         assertEquals(100, calc.getMultiple(50,2));

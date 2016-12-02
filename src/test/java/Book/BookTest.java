@@ -1,5 +1,4 @@
 package Book;
-import Book.Book;
 import org.junit.Test;
 
 
@@ -12,21 +11,22 @@ public class BookTest {
 
     @Test
     public void testPublisher() {
-        Book book1 = new Book("Война и мир", "Л. Н. Толстой", 1863, "ХудКнига");
+        Book book1 = new Book("Война и мир", "Л.Н. Толстой", 1863, "ХудКнига");
         assertEquals("ХудКнига", book1.publisher.name);
     }
 
     @Test
     public void testisNewBook() {
-        Book book1 = new Book("Война и мир", "Л. Н. Толстой", 2005, "ХудКнига");
-        assertEquals("Old book", book1.isNewBook(2005));
+        Book book1 = new Book("Война и мир", "Л.Н. Толстой", 2005, "ХудКнига");
+        assertEquals("Old book", book1.relativeBookAge(2005));
 
     }
 
-    /*public void testisNewBookAnon() {
+    public void testRelateveBookAge() {
         Book book1 = new Book("Война и мир", "Л. Н. Толстой", 2005, "ХудКнига") {
-            @override
-            public String isNewBook() {
+            @Override
+            public String relativeBookAge(int
+                                    year) {
                 if ((2016 - year) < 1) {
                     return "New book";
                 } else {
@@ -34,6 +34,7 @@ public class BookTest {
                 }
             }
 
-        }
-    }*/
+        };
+
+    }
 }

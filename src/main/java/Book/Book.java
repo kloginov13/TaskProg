@@ -3,7 +3,7 @@ package Book;
 /**
  * Created by Админ on 15.11.2016.
  */
-public class Book {
+public  class Book {
     String name;
     String author;
     int year;
@@ -17,7 +17,7 @@ public class Book {
         publisher = new Publisher(publ);
     }
 
-    public String isNewBook(int year){
+    public String relativeBookAge(int year){
         if ((2016-year)<10){
             return "New book";
         }else {
@@ -38,4 +38,5 @@ public class Book {
             return (this.name);
         }
     }
+
 }

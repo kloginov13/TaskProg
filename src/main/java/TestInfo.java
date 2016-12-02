@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface MyAnno {
+public @interface TestInfo {
     public enum Priority {
         LOW, MEDIUM, HIGH
     }

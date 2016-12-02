@@ -17,4 +17,6 @@ public class Calc {
     public int getMultiple(int x, int y) {
         return x*y;
     }
+
+
 }
